@@ -3,30 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>Kkukku Payday</string>
+	<string>Salary Kkukku</string>
 	<key>CFBundleExecutable</key>
-	<string>KkukkuPayday</string>
+	<string>SalaryKkukku</string>
 	<key>CFBundleIdentifier</key>
-	<string>app.kkukku.payday</string>
+	<string>app.salary.kkukku</string>
 	<key>CFBundleName</key>
-	<string>Kkukku Payday</string>
+	<string>Salary Kkukku</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.2.1</string>
+	<string>0.3.0</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>app.kkukku.payday.controls</string>
+			<string>app.salary.kkukku.controls</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>kkukku-payday</string>
+				<string>salary-kkukku</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>3</string>
+	<string>4</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>14.0</string>
 	<key>LSUIElement</key>

@@ -1,4 +1,4 @@
-# Kkukku Payday
+# Salary Kkukku
 
 A small, free macOS desktop widget: an animated pigeon with a laptop sits under a two-line bubble showing your estimated earnings so far this month, based on your monthly salary, workdays and working hours. The interface is Korean and amounts are in KRW.
 
@@ -6,13 +6,13 @@ Estimates are for fun only. They are not actual payroll or tax advice, and no ho
 
 ## What the plugin does
 
-The plugin contains one skill, `kkukku-payday`, which lets Claude install, launch, show, hide, quit, or open the settings of the widget on your Mac. Supports overnight shifts, comma-formatted salary input, weekday selection and `HH:mm` times. New installs default to a monthly salary of KRW 3,000,000; values you save are preserved.
+The plugin contains one skill, `salary-kkukku`, which lets Claude install, launch, show, hide, quit, or open the settings of the widget on your Mac. Supports overnight shifts, comma-formatted salary input, weekday selection and `HH:mm` times. New installs default to a monthly salary of KRW 3,000,000; values you save are preserved.
 
 Example prompts:
 
-- "Install and launch Kkukku Payday on my Mac."
-- "Open my Kkukku Payday salary and schedule settings."
-- "Hide my Kkukku Payday widget."
+- "Install and launch Salary Kkukku on my Mac."
+- "Open my Salary Kkukku salary and schedule settings."
+- "Hide my Salary Kkukku widget."
 
 ## Requirements
 
@@ -24,7 +24,7 @@ Example prompts:
 
 All code is readable source in this folder. Nothing is downloaded and no package manager is used.
 
-- `scripts/install.sh` compiles `src/*.swift` with `swiftc` for both Apple Silicon and Intel, and installs only `~/Applications/Kkukku Payday.app`. It stops instead of overwriting an existing app.
+- `scripts/install.sh` compiles `src/*.swift` with `swiftc` for both Apple Silicon and Intel, and installs only `~/Applications/Salary Kkukku.app`. It stops instead of overwriting an existing app.
 - `scripts/control.sh launch|show|settings|hide|quit|status` controls the installed app.
 - `scripts/build.sh` and `scripts/test.sh` build the app and run the salary-calculation tests.
 

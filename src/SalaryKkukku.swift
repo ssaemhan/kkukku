@@ -218,7 +218,7 @@ final class SalarySettingsDialog: NSObject, NSWindowDelegate {
 final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate {
     var settingsOpen = false
     func application(_ application: NSApplication, open urls: [URL]) {
-        for url in urls where url.scheme == "kkukku-payday" {
+        for url in urls where url.scheme == "salary-kkukku" {
             guard url.query == nil, url.fragment == nil, url.path.isEmpty || url.path == "/" else { continue }
             switch url.host {
             case "settings": changeSalary()
@@ -291,7 +291,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate {
         if let screen = NSScreen.main {
             panel.setFrameOrigin(NSPoint(x: screen.visibleFrame.maxX - 330, y: screen.visibleFrame.minY + 190))
         }
-        panel.setFrameAutosaveName("KkukkuPaydayPosition")
+        panel.setFrameAutosaveName("SalaryKkukkuPosition")
         if let view = panel.contentView { panel.setContentSize(view.fittingSize) }
         if !NSScreen.screens.contains(where: { $0.visibleFrame.intersects(panel.frame) }), let screen = NSScreen.main {
             panel.setFrameOrigin(NSPoint(x: screen.visibleFrame.maxX - 330, y: screen.visibleFrame.minY + 190))
@@ -299,14 +299,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate {
         panel.orderFrontRegardless()
         status = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         status.button?.title = "₩"
-        status.button?.toolTip = "Kkukku Payday"
+        status.button?.toolTip = "Salary Kkukku"
         let menu = NSMenu()
-        let title = NSMenuItem(title: "Kkukku Payday", action: nil, keyEquivalent: "")
+        let title = NSMenuItem(title: "Salary Kkukku", action: nil, keyEquivalent: "")
         menu.addItem(title)
         menu.addItem(.separator())
         add(menu, "월급·근무 요일·시간 설정…", #selector(changeSalary))
-        add(menu, "표시창 보이기 / 숨기기", #selector(toggle))
-        add(menu, "표시창 위치 초기화", #selector(resetPosition))
+        add(menu, "Kkukku 보이기 / 숨기기", #selector(toggle))
         add(menu, "계산 기준 보기", #selector(showInfo))
         menu.addItem(.separator())
         add(menu, "종료", #selector(quit))
@@ -414,12 +413,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate {
     }
 
     @objc func toggle() { panel.isVisible ? panel.orderOut(nil) : panel.orderFrontRegardless() }
-    @objc func resetPosition() {
-        if let screen = NSScreen.main {
-            panel.setFrameOrigin(NSPoint(x: screen.visibleFrame.maxX - 330, y: screen.visibleFrame.minY + 190))
-            panel.orderFrontRegardless()
-        }
-    }
     @objc func showInfo() {
         NSApp.activate(ignoringOtherApps: true)
         let alert = NSAlert()
@@ -431,7 +424,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate {
 }
 
 @main
-struct KkukkuPaydayMain {
+struct SalaryKkukkuMain {
     static func main() {
         let application = NSApplication.shared
         let delegate = AppDelegate()
