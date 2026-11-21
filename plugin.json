@@ -19,6 +19,7 @@
   ],
   "extensions": {
     "com.openai": {
+      "requires_local_executor": true,
       "interface": {
         "displayName": "Salary Kkukku",
         "shortDescription": "Real-time salary widget",
