@@ -5,7 +5,8 @@
   "description": "A Korean macOS widget that estimates earnings in real time from a monthly salary and work schedule.",
   "author": {
     "name": "saemhan",
-    "email": "whosemi@gmail.com"
+    "email": "whosemi@gmail.com",
+    "url": "https://github.com/ssaemhan"
   },
   "homepage": "https://github.com/ssaemhan/kkukku",
   "repository": "https://github.com/ssaemhan/kkukku",
@@ -20,17 +21,46 @@
     "com.openai": {
       "interface": {
         "displayName": "Salary Kkukku",
-        "shortDescription": "실시간 월급 카운터 위젯",
-        "longDescription": "월급과 근무 요일·시간을 기준으로 이번 달 예상 누적 수입을 초 단위로 보여주는 macOS 꾸꾸 위젯입니다.",
+        "shortDescription": "Real-time salary widget",
+        "longDescription": "A Korean-language macOS widget that estimates this month's accumulated earnings in real time from a monthly salary, selected workdays, and working hours. Estimates are informational only and do not include holidays, breaks, taxes, or payroll adjustments.",
         "developerName": "saemhan",
         "category": "Productivity",
         "capabilities": [
           "Interactive"
         ],
-        "defaultPrompt": "Salary Kkukku를 설치하고 실행해줘.",
+        "defaultPrompt": [
+          "Salary Kkukku를 설치하고 실행해줘.",
+          "Salary Kkukku의 월급과 근무 일정을 설정해줘.",
+          "Salary Kkukku 표시창을 숨겨줘."
+        ],
         "websiteURL": "https://github.com/ssaemhan/kkukku",
+        "supportURL": "https://github.com/ssaemhan/kkukku/issues",
+        "privacyPolicyURL": "https://github.com/ssaemhan/kkukku/blob/main/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/ssaemhan/kkukku/blob/main/TERMS.md",
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/icon.png"
+      },
+      "onboardingSkill": "./skills/salary-kkukku/SKILL.md",
+      "review": {
+        "prompts": [
+          "Salary Kkukku를 설치하고 실행해줘.",
+          "Salary Kkukku의 월급과 근무 일정을 설정해줘.",
+          "Salary Kkukku가 실행 중인지 확인해줘.",
+          "Salary Kkukku 표시창을 숨겨줘.",
+          "Salary Kkukku를 종료해줘."
+        ],
+        "commerce": false,
+        "commerce_description": "Salary Kkukku is free and does not sell products, process payments, or offer paid features."
+      },
+      "publication": {
+        "countries": ["KR"],
+        "release_notes": "Initial public release of Salary Kkukku with real-time monthly earnings estimates and editable work schedules.",
+        "translations": {
+          "ko-KR": {
+            "subtitle": "실시간 월급 카운터 위젯",
+            "description": "월급과 근무 요일·시간을 기준으로 이번 달 예상 누적 수입을 초 단위로 보여주는 macOS 꾸꾸 위젯입니다. 공휴일, 휴게시간, 세금 및 실제 급여 조정은 반영하지 않는 참고용 추정치입니다."
+          }
+        }
       }
     }
   }
