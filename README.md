@@ -1,4 +1,4 @@
-# Kkukku Payday (꾸꾸 페이데이)
+# Kkukku Payday
 
 A small, free macOS desktop widget: an animated pigeon with a laptop sits under a two-line bubble showing your estimated earnings so far this month, based on your monthly salary, workdays and working hours. The interface is Korean and amounts are in KRW.
 
