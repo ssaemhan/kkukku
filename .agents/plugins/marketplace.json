@@ -1,0 +1,20 @@
+{
+  "name": "salary-kkukku-marketplace",
+  "interface": {
+    "displayName": "Salary Kkukku"
+  },
+  "plugins": [
+    {
+      "name": "salary-kkukku",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
